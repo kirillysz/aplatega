@@ -12,13 +12,14 @@ class PaymentDetails(TypedDict):
 
 
 class CreateTransactionRequest(TypedDict):
-    paymentMethod: int
+    paymentMethod: Optional[int]
     paymentDetails: PaymentDetails
 
-    description: Optional[str]
-    returnUrl: Optional[str]
-    failedUrl: Optional[str]
-    payload: Optional[str]
+    description: str
+    returnUrl: str
+    failedUrl: str
+    payload: str
+    
     metadata: Optional[dict[str, Any]]
 
 class CreateTransactionResponse(TypedDict):
