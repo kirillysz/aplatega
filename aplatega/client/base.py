@@ -46,6 +46,7 @@ class BaseClient():
                     url,
                     json=json,
                     params=params,
+                    headers=self.auth.headers()
                 ) as response:
 
                     try:
